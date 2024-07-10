@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import { Component } from "react";
 
 // Definimos la interfaz para las props de EstadoHijo
 interface EstadoHijoProps {
@@ -31,11 +31,11 @@ export default class Estado extends Component<EstadoProps, EstadoState> {
     };
 
     // Iniciamos el contador
-    setInterval(() => {
+    /* setInterval(() => {
       this.setState((prevState) => ({
         contador: prevState.contador + 1,
       }));
-    }, 1000); // Establecemos el intervalo de tiempo en 1000 ms (1 segundo)
+    }, 1000); // Establecemos el intervalo de tiempo en 1000 ms (1 segundo) */
   }
 
   render() {
