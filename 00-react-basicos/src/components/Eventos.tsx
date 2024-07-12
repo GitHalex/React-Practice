@@ -7,7 +7,7 @@ interface EstadoState {
   contador: number;
 }
 
-export default class Eventos extends Component<EstadoProps, EstadoState> {
+export class EventosES6 extends Component<EstadoProps, EstadoState> {
   constructor(props: EstadoProps) {
     super(props);
     this.state = {
@@ -31,7 +31,40 @@ export default class Eventos extends Component<EstadoProps, EstadoState> {
   render() {
     return (
       <>
-        <h2>Eventos en componentes</h2>
+        <h2>Eventos en componentes ES6</h2>
+        <button onClick={this.sumar}>Sumar</button>
+        <button onClick={this.restar}>Restar</button>
+
+        <h3>{this.state.contador}</h3>
+      </>
+    );
+  }
+}
+
+// Properties Initializer
+export class EventosES7 extends Component<EstadoProps, EstadoState> {
+  state = {
+    contador: 0,
+  };
+
+  //arrow functions
+  sumar = () => {
+    console.log("Sumando");
+    this.setState({
+      contador: this.state.contador + 1,
+    });
+  };
+  restar = () => {
+    console.log("Restando");
+    this.setState({
+      contador: this.state.contador - 1,
+    });
+  };
+
+  render() {
+    return (
+      <>
+        <h2>Eventos en componentes ES7</h2>
         <button onClick={this.sumar}>Sumar</button>
         <button onClick={this.restar}>Restar</button>
 
