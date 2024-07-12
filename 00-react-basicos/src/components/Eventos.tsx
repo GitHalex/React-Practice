@@ -1,4 +1,9 @@
-import { Component } from "react";
+import { Component, MouseEvent } from "react";
+
+// Define una interfaz para las props del componente Boton
+interface BotonProps {
+  myonClick: (e: MouseEvent<HTMLButtonElement>) => void;
+}
 
 // Definimos la interfaz para las props de Estado
 interface EstadoProps {}
@@ -69,6 +74,50 @@ export class EventosES7 extends Component<EstadoProps, EstadoState> {
         <button onClick={this.restar}>Restar</button>
 
         <h3>{this.state.contador}</h3>
+      </>
+    );
+  }
+}
+
+/* function Boton(props: any) {
+  return (
+    <>
+      <button onClick={props.myonClick}> Boton hecho componente</button>
+    </>
+  );
+} */
+
+const Boton: React.FC<BotonProps> = ({ myonClick }) => (
+  <button onClick={myonClick}> Boton hecho componente</button>
+);
+
+interface MasSobreEventosState {}
+
+export class MasSobreEventos extends Component<{}, MasSobreEventosState> {
+  handleClick = (e: MouseEvent<HTMLButtonElement>, mensaje: string) => {
+    console.log(e);
+    console.log(e.target);
+    console.log(e.nativeEvent.target);
+    console.log(mensaje);
+  };
+
+  render() {
+    return (
+      <>
+        <h2>Mas Sobre Eventos</h2>
+        <button
+          onClick={(e) =>
+            this.handleClick(e, "Hola pasando parametro desde un evento")
+          }
+        >
+          Saludar
+        </button>
+
+        <Boton
+          myonClick={(e) =>
+            this.handleClick(e, "Hola pasando parametro desde un evento")
+          }
+        />
       </>
     );
   }
