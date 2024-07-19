@@ -6,6 +6,8 @@ import Estado from "./components/Estado";
 import RenderizadoCondicional from "./components/RenderizadoCondicional";
 import RenderizadoElementos from "./components/RenderizadoElementos";
 import { EventosES6, EventosES7, MasSobreEventos } from "./components/Eventos";
+import ComunicacionComponentes from "./components/ComunicacionComponentes";
+import CicloVida from "./components/CicloVida";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -42,6 +44,10 @@ function App() {
         <EventosES7 />
         <hr />
         <MasSobreEventos />
+        <hr />
+        <ComunicacionComponentes />
+        <hr />
+        <CicloVida />
       </section>
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>

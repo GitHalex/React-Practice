@@ -40,3 +40,19 @@
 .read-the-docs {
   color: #888;
 }
+
+.pantalla-contador {
+  border: thin solid white;
+  border-radius: 10px;
+  background-color: rgba(50, 115, 220, 0.3);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: 100px; /* O cualquier tamaño que prefieras */
+  height: 100px; /* Igual que el ancho para hacerlo cuadrado */
+  padding: 0; /* Asegúrate de que el padding no afecte el centrado */
+  box-sizing: border-box; /* Incluye el borde en el tamaño total del contenedor */
+  font-size: 50px;
+}
