@@ -38,12 +38,12 @@ export default class AjaxApis extends Component<{}, AjaxApisState> {
     fetch(url)
       .then((res) => res.json())
       .then((json) => {
-        console.log(json);
+        // console.log(json);
         json.results.forEach((el: { url: string }) => {
           fetch(el.url)
             .then((res) => res.json())
             .then((json) => {
-              console.log(json);
+              // console.log(json);
               let pokemon: PokemonState = {
                 id: json.id,
                 name: json.name,
