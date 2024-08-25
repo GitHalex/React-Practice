@@ -11,6 +11,7 @@ import CicloVida from "./components/CicloVida";
 import AjaxApis from "./components/AjaxApis";
 import ContadorHooks from "./components/ContadorHooks";
 import ScrollHooks from "./components/ScrollHooks";
+import RelojHooks from "./components/RelojHooks";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -57,6 +58,8 @@ function App() {
         <ContadorHooks />
         <hr />
         <ScrollHooks />
+        <hr />
+        <RelojHooks />
       </section>
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
