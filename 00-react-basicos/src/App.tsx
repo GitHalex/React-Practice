@@ -12,6 +12,7 @@ import AjaxApis from "./components/AjaxApis";
 import ContadorHooks from "./components/ContadorHooks";
 import ScrollHooks from "./components/ScrollHooks";
 import RelojHooks from "./components/RelojHooks";
+import AjaxHooks from "./components/AjaxHooks";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -60,6 +61,8 @@ function App() {
         <ScrollHooks />
         <hr />
         <RelojHooks />
+        <hr />
+        <AjaxHooks />
       </section>
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>

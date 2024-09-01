@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 export default function ContadorHooks() {
-  console.log(useState());
+  // console.log(useState());
   // Declarar un estado llamado "count" con un valor inicial de 0
   const [contador, setContador] = useState<number>(0);
 
