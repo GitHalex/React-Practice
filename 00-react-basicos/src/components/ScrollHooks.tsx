@@ -4,7 +4,7 @@ const ScrollHooks = () => {
   const [scrollY, setScrolly] = useState<number>(0);
 
   useEffect(() => {
-    console.log("Moviendo el Scroll");
+    // console.log("Moviendo el Scroll");
     const detectarScroll = () => setScrolly(window.pageYOffset);
     window.addEventListener("scroll", detectarScroll);
     // Limpiar el efecto para evitar múltiples listeners
@@ -14,16 +14,16 @@ const ScrollHooks = () => {
   }); // Lista de dependencias vacía para ejecutar solo una vez en el montaje
 
   useEffect(() => {
-    console.log("Fase de Montaje");
+    // console.log("Fase de Montaje");
   }, []);
 
   useEffect(() => {
-    console.log("Fase de Actualizacion");
+    // console.log("Fase de Actualizacion");
   });
 
   useEffect(() => {
     return () => {
-      console.log("Fase de Desmontaje");
+      // console.log("Fase de Desmontaje");
     };
   });
 

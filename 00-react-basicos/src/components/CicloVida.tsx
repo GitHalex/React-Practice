@@ -42,13 +42,13 @@ export default class CicloVida extends Component<{}, EstadoState> {
   }
 
   componentDidMount() {
-    console.log(1, "El componente ya se encuentra en el DOM");
+    // console.log(1, "El componente ya se encuentra en el DOM");
   }
 
   componentDidUpdate(prevProps: {}, prevState: EstadoState) {
-    console.log(2, "El estado o las props del componente han cambiado");
-    console.log(prevProps);
-    console.log(prevState);
+    // console.log(2, "El estado o las props del componente han cambiado");
+    // console.log(prevProps);
+    // console.log(prevState);
   }
 
   tictac = () => {

@@ -22,7 +22,7 @@ export class EventosES6 extends Component<EstadoProps, EstadoState> {
     this.restar = this.restar.bind(this);
   }
   sumar() {
-    console.log("Sumando");
+    // console.log("Sumando");
     this.setState({
       contador: this.state.contador + 1,
     });
@@ -54,7 +54,7 @@ export class EventosES7 extends Component<EstadoProps, EstadoState> {
 
   //arrow functions
   sumar = () => {
-    console.log("Sumando");
+    // console.log("Sumando");
     this.setState({
       contador: this.state.contador + 1,
     });
